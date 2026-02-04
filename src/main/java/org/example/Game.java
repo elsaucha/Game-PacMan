@@ -4,8 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Game extends JPanel {
-    private static final int WIDTH = 759;
-    private static final int HEIGHT = 750;
+    private static final int WIDTH = 820;
+    private static final int HEIGHT = 775;
 
     Player player = new Player(this);
     private final String[][] MAPA = {
@@ -20,10 +20,16 @@ public class Game extends JPanel {
             {"X","X","X","X","X","","X","","X","X","","","","X","X","","X","","X","X","X","X","X"},
             {"","O","O","O","O","O","O","O","X","","","","","","X","O","O","O","O","O","O","O",""},                     //10
             {"X","X","X","X","X","","X","","X","X","X","X","X","X","X","","X","","X","X","X","X","X"},
-            {"X","X","X","X","X","O","X","O","O","O","O","O","O","O","O","O","X","O","X","X","X","X","X"},
+            {"X","X","X","X","X","O","X","O","O","O","O","","O","O","O","O","X","O","X","X","X","X","X"},
             {"X","X","X","X","X","","X","","X","X","X","X","X","X","X","","X","","X","X","X","X","X",},
             {"X","O","O","O","O","O","O","O","O","O","O","X","O","O","O","O","O","O","O","O","O","O","X"},
-
+            {"X","","X","X","X","","X","X","X","","","X","","","X","X","X","","X","X","X","","X"},                      //15
+            {"X","O","O","O","X","O","O","O","O","O","O","O","O","O","O","O","O","O","X","O","O","O","X"},
+            {"X","X","","","X","","X","","X","X","X","X","X","X","X","","X","","X","","","X","X"},
+            {"X","O","O","O","O","O","X","","","","","X","","","","","X","O","O","O","O","O","X"},
+            {"X","","X","X","X","X","X","X","X","","","X","","","X","X","X","X","X","X","X","","X"},
+            {"X","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","O","X"},
+            {"X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X"}
     }
             ;
 
@@ -59,15 +65,15 @@ public class Game extends JPanel {
             for (int j=0;j<MAPA[i].length;j++){
                 if (MAPA[i][j].equals("X")){
                     graphics.setColor(Color.blue);
-                    graphics.fillRect(posicionX,posicionY,33,25);
+                    graphics.drawRect(posicionX,posicionY,35,35);
                 }else if (MAPA[i][j].equals("O")){
                     graphics.setColor(Color.red);
-                    graphics.fillOval(posicionX+10,posicionY+6,12,12);
+                    graphics.fillOval(posicionX+12,posicionY+12,10,10);
                 }
-                posicionX += 33;
+                posicionX += 35;
             }
             posicionX = 0;
-            posicionY += 25;
+            posicionY += 35;
         }
     }
 

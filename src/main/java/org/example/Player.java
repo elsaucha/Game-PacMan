@@ -3,7 +3,7 @@ package org.example;
 import java.awt.*;
 
 public class Player {
-    private static final int DIAMETER = 30;
+    private static final int DIAMETER = 23;
     private int x;
     private int y;
     Game game;
@@ -18,8 +18,8 @@ public class Player {
     }
 
     public void initialPosition(){
-        x = 250;
-        y = 250;
+        x = 390;
+        y = 390;
     }
 
 }
